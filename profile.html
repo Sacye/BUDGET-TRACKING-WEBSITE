@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketPilot Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logout.js" defer></script>
+</head>
+<body class="profile-body">
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/7752/7752650.png" alt="Logo" class="logo">
+            <span class="company-name">PocketPilot</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="intro.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">Service <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="Tracker.html">Tracker</a>
+                    <a href="Chart.html">Chart</a>
+                    <a href="Savings.html">Savings</a>
+                </div>
+            </li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <h1 class="pro">Your Profile</h1>
+
+        <div class="profile-card">
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <button class="change-pic-btn">Change Picture</button>
+            </div>
+
+            <div class="profile-details">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 1234 Elm Street, City, Country</p>
+            </div>
+        </div>
+
+        <!-- User Bio Section -->
+        <div class="profile-section">
+            <h2>About Me</h2>
+            <p id="user-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <button class="edit-profile-btn" onclick="editBio()">Edit Bio</button>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="profile-section">
+            <h2>Recent Activity</h2>
+            <ul class="recent-activity">
+                <li>✔ Completed "Intro to HTML" - 2 days ago</li>
+                <li>✔ Unlocked "CSS Basics" Badge - 4 days ago</li>
+                <li>✔ Updated Profile Information - 1 week ago</li>
+            </ul>
+        </div>
+
+        <!-- User Preferences -->
+        <div class="profile-section">
+            <h2>Preferences</h2>
+            <label><input type="checkbox" checked> Receive Email Notifications</label> <br>
+            <label><input type="checkbox"> Dark Mode</label> <br>
+            <button class="edit-profile-btn">Save Preferences</button>
+        </div>
+
+        <div class="edit-buttons">
+            <button class="edit-profile-btn">Edit Profile</button>
+            <button class="change-password-btn">Change Password</button>
+        </div>
+
+        <button class="button logout-btn" id="logoutButton">Logout</button>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 PocketPilot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function editBio() {
+            let bio = prompt("Enter your new bio:", document.getElementById("user-bio").innerText);
+            if (bio !== null && bio.trim() !== "") {  // Ensure user entered valid input
+                document.getElementById("user-bio").innerText = bio;
+            }
+        }
+    </script>
+    
+</body>
+</html>

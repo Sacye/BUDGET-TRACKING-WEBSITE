@@ -1,0 +1,511 @@
+/* General Body Style */
+.firstbody {
+  background: url(https://cdn.dribbble.com/users/836931/screenshots/2716272/bank_800.gif) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #F5EFE7;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+.p1 {
+  font-size: 30px;
+  color: #333;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.p2 {
+  color: #3E5879;
+}
+h1 {
+  font-size: 3.5em;
+  color: #ffffff;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+h1 span {
+  color: #16a085;
+  font-size: 3.4em;
+}
+
+
+/* Button Style */
+.button {
+  background-color: #16a085;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #1abc9c;
+  transform: scale(1.1);
+}
+
+.button span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* New Button Style */
+.new-button {
+  background-color: #3498db; /* Different color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.new-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Adding some responsive design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5em;
+  }
+
+
+  .button {
+      padding: 12px 25px;
+      font-size: 1em;
+  }
+
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;  /* Space between logo and menu */
+  align-items: center;  /* Vertically align items */
+  padding: 10px 20px;
+  background-color: #213555;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Transparent border */
+  border-radius: 8px;
+}
+
+/* Logo and Company Name Container */
+.logo-container {
+  display: flex;
+  align-items: center; /* Vertically align logo and name */
+}
+
+.logo {
+  height: 50px;  /* Adjust logo size */
+  width: auto;
+  margin-right: 10px; /* Space between logo and company name */
+}
+
+.company-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #333;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-menu a:hover, .dropdown:hover .dropbtn {
+  background-color: #F5EFE7;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.about-container {
+  margin-left: 10vh;
+  margin-right: 10vh;
+  font-size: 23px;
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Section Styles */
+.profile-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-section h2 {
+  color: #213555;
+  margin-bottom: 100px;
+}
+
+.recent-activity {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activity li {
+  background-color: #f4f7f6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+/* Preferences Section */
+.profile-section label {
+  font-size: 1.1em;
+  color: #333;
+  display: block;
+  margin: 10px 0;
+}
+
+.profile-section input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Buttons */
+.edit-profile-btn, .change-password-btn {
+  background-color: #213555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover, .change-password-btn:hover {
+  background-color: #1a2a44;
+}
+
+.pro {
+  font-size: 2.5em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Profile Section Styling */
+.profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-picture {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #2c3e50;
+  object-fit: cover;
+}
+
+.change-pic-btn {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.change-pic-btn:hover {
+  background-color:#2c3e50;
+}
+
+.profile-details {
+  flex: 2;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.profile-details p {
+  margin: 10px 0;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.edit-profile-btn,
+.change-password-btn {
+  background-color:#2c3e50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover,
+.change-password-btn:hover {
+  background-color: #2c3e50;
+}
+
+/* Log Out Button Styling */
+.logout-btn {
+  background-color: #213555;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #1a2a44;
+}
+
+
+/* Footer Section */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.homeh1{
+  text-align: center;
+}
+.homeh1 span {
+  font-size: 3.4rem;
+  text-align: center;
+}
+
+.ho {
+  text-align: center;
+}
+/* Recent Expense Activity Section */
+.recent-activity {
+  text-align: center;
+  padding: 50px;
+  background: #f4f7f6;
+}
+
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center; /* Center the list */
+}
+
+.expense-list li {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  font-size: 1.1em;
+  text-align: left; /* Align text to the left */
+}
+
+.expense-list li .delete-btn {
+  margin-left: 10px; /* Add some space between text and delete button */
+}
+
+/* Quick Links Section */
+.quick-links {
+  text-align: center;
+  padding: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links .button {
+  background-color: #213555;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.links .button:hover {
+  background-color: #1a2a44;
+}
+
+/* Centering Content */
+#allowanceSection, #savingsDisplay, #expenseSection, #controlsSection, #savingsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
