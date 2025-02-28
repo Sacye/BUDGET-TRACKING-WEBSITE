@@ -6,6 +6,8 @@
     <title>PocketPilot Profile</title>
     <link rel="stylesheet" href="style.css">
     <script src="logout.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="profile.js" defer></script>
 </head>
 <body class="profile-body">
     <!-- Navigation bar -->
@@ -50,17 +52,67 @@
         <!-- User Bio Section -->
         <div class="profile-section">
             <h2>About Me</h2>
-            <p id="user-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <button class="edit-profile-btn" onclick="editBio()">Edit Bio</button>
+            <p id="user-tagline">#MakeYourTagline</p>
+            <p id="user-hashtags">#YourHashtagsWillAppearHere</p>
+            <button class="edit-profile-btn" onclick="openBioModal()">Edit Bio</button>
+        </div>
+
+        <!-- Bio Modal -->
+        <div id="bioModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeBioModal()">&times;</span>
+                <h2>Edit Bio</h2>
+                <input type="text" id="taglineInput" placeholder="Type your tagline..." oninput="resetTagline()">
+                <div id="suggestions">
+                    <span class="suggestion" onclick="toggleHashtag(this, '#BagoLangTo')">#BagoLangTo</span>
+                    <span class="suggestion" onclick="toggleHashtag(this, '#ICT1B')">#ICT1B</span>
+                    <span class="suggestion" onclick="toggleHashtag(this, '#Newbie')">#Newbie</span>
+                    <span class="suggestion" onclick="toggleHashtag(this, '#TechEnthusiast')">#TechEnthusiast</span>
+                </div>
+                <button class="save-btn" onclick="saveBio()">Save</button>
+                <button class="reset-btn" onclick="resetTagline()">Reset</button>
+            </div>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="profile-section">
+            <h2>Hobbies</h2>
+            <p id="user-hobbies">Your hobbies will appear here</p>
+            <div id="hobbies-labels" style="display: none;">
+                <span class="label" onclick="toggleHobby(this)">Reading</span>
+                <span class="label" onclick="toggleHobby(this)">Traveling</span>
+                <span class="label" onclick="toggleHobby(this)">Coding</span>
+                <span class="label" onclick="toggleHobby(this)">Gaming</span>
+                <span class="label" onclick="toggleHobby(this)">Cooking</span>
+            </div>
+            <button class="edit-profile-btn" id="editHobbiesBtn" onclick="editHobbies()">Edit Hobbies</button>
+            <button class="save-btn" id="saveHobbiesBtn" onclick="saveHobbies()" style="display: none;">Save Hobbies</button>
+            <button class="reset-btn" id="resetHobbiesBtn" onclick="resetHobbies()" style="display: none;">Reset</button>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="profile-section">
+            <h2>Interests</h2>
+            <p id="user-interests">Your interests will appear here</p>
+            <div id="interests-labels" style="display: none;">
+                <span class="label" onclick="toggleInterest(this)">Technology</span>
+                <span class="label" onclick="toggleInterest(this)">Music</span>
+                <span class="label" onclick="toggleInterest(this)">Sports</span>
+                <span class="label" onclick="toggleInterest(this)">Art</span>
+                <span class="label" onclick="toggleInterest(this)">Science</span>
+            </div>
+            <button class="edit-profile-btn" id="editInterestsBtn" onclick="editInterests()">Edit Interests</button>
+            <button class="save-btn" id="saveInterestsBtn" onclick="saveInterests()" style="display: none;">Save Interests</button>
+            <button class="reset-btn" id="resetInterestsBtn" onclick="resetInterests()" style="display: none;">Reset</button>
         </div>
 
         <!-- Recent Activity -->
         <div class="profile-section">
             <h2>Recent Activity</h2>
             <ul class="recent-activity">
-                <li>✔ Completed "Intro to HTML" - 2 days ago</li>
-                <li>✔ Unlocked "CSS Basics" Badge - 4 days ago</li>
-                <li>✔ Updated Profile Information - 1 week ago</li>
+                <li>✔ Completed "Intro to HTML" - 2 days ago <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></li>
+                <li>✔ Unlocked "CSS Basics" Badge - 4 days ago <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div></li>
+                <li>✔ Updated Profile Information - 1 week ago <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div></li>
             </ul>
         </div>
 
@@ -68,7 +120,7 @@
         <div class="profile-section">
             <h2>Preferences</h2>
             <label><input type="checkbox" checked> Receive Email Notifications</label> <br>
-            <label><input type="checkbox"> Dark Mode</label> <br>
+            <label><input type="checkbox" id="darkModeToggle"> Dark Mode</label> <br>
             <button class="edit-profile-btn">Save Preferences</button>
         </div>
 
@@ -89,9 +141,57 @@
             let bio = prompt("Enter your new bio:", document.getElementById("user-bio").innerText);
             if (bio !== null && bio.trim() !== "") {  // Ensure user entered valid input
                 document.getElementById("user-bio").innerText = bio;
+                localStorage.setItem("userBio", bio);
             }
         }
+
+        function openBioModal() {
+            document.getElementById("bioModal").style.display = "block";
+        }
+
+        function closeBioModal() {
+            document.getElementById("bioModal").style.display = "none";
+        }
+
+        function saveBio() {
+            let bio = document.getElementById("bioInput").value;
+            if (bio.trim() !== "") {
+                document.getElementById("user-bio").innerText = bio;
+                localStorage.setItem("userBio", bio);
+                closeBioModal();
+            }
+        }
+
+        function editHobbies() {
+            let hobbies = prompt("Enter your new hobbies and interests:", document.getElementById("user-hobbies").innerText);
+            if (hobbies !== null && hobbies.trim() !== "") {  // Ensure user entered valid input
+                document.getElementById("user-hobbies").innerText = hobbies;
+                localStorage.setItem("userHobbies", hobbies);
+            }
+        }
+
+        function openHobbiesModal() {
+            // Implement the modal opening logic here
+            // For now, we can use a simple prompt as a placeholder
+            editHobbies();
+        }
+
+        function loadProfileData() {
+            const savedBio = localStorage.getItem("userBio");
+            const savedHobbies = localStorage.getItem("userHobbies");
+
+            if (savedBio) {
+                document.getElementById("user-bio").innerText = savedBio;
+            }
+
+            if (savedHobbies) {
+                document.getElementById("user-hobbies").innerText = savedHobbies;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadProfileData);
     </script>
     
 </body>
+</html>
 </html>
