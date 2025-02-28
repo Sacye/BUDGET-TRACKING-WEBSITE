@@ -1,4 +1,5 @@
 /* General Body Style */
+/* Styles for the main body of the page, including background image, font, and text alignment */
 .firstbody {
   background: url(https://cdn.dribbble.com/users/836931/screenshots/2716272/bank_800.gif) no-repeat center center fixed;
   background-size: cover;
@@ -11,6 +12,8 @@
   position: relative;
 }
 
+/* Paragraph Styles */
+/* Styles for different paragraph elements */
 .p1 {
   font-size: 30px;
   color: #333;
@@ -28,6 +31,9 @@
 .p2 {
   color: #3E5879;
 }
+
+/* Heading Styles */
+/* Styles for the main heading */
 h1 {
   font-size: 3.5em;
   color: #ffffff;
@@ -40,8 +46,8 @@ h1 span {
   font-size: 3.4em;
 }
 
-
-/* Button Style */
+/* Button Styles */
+/* Styles for buttons, including hover effects */
 .button {
   background-color: #16a085;
   padding: 15px 30px;
@@ -72,6 +78,7 @@ h1 span {
 }
 
 /* New Button Style */
+/* Styles for a new type of button with a different color */
 .new-button {
   background-color: #3498db; /* Different color */
   padding: 10px 20px;
@@ -90,21 +97,21 @@ h1 span {
   transform: scale(1.1);
 }
 
-/* Adding some responsive design */
+/* Responsive Design */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
   h1 {
       font-size: 2.5em;
   }
 
-
   .button {
       padding: 12px 25px;
       font-size: 1em;
   }
-
-
 }
 
+/* Navigation Bar Styles */
+/* Styles for the navigation bar, including logo and menu */
 .navbar {
   display: flex;
   justify-content: space-between;  /* Space between logo and menu */
@@ -116,6 +123,7 @@ h1 span {
 }
 
 /* Logo and Company Name Container */
+/* Styles for the logo and company name in the navigation bar */
 .logo-container {
   display: flex;
   align-items: center; /* Vertically align logo and name */
@@ -133,6 +141,8 @@ h1 span {
   font-weight: bold;
 }
 
+/* Navigation Menu Styles */
+/* Styles for the navigation menu items */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -158,6 +168,8 @@ h1 span {
   color: #333;
 }
 
+/* Dropdown Menu Styles */
+/* Styles for the dropdown menu in the navigation bar */
 .dropdown {
   position: relative;
 }
@@ -203,12 +215,16 @@ h1 span {
   background-color: #ddd;
 }
 
+/* About Container Styles */
+/* Styles for the about section container */
 .about-container {
   margin-left: 10vh;
   margin-right: 10vh;
   font-size: 23px;
 }
 
+/* Footer Styles */
+/* Styles for the footer section */
 .footer {
   background-color: #2c3e50;
   color: white;
@@ -237,6 +253,7 @@ h1 span {
 }
 
 /* Profile Section Styles */
+/* Styles for the profile section, including cards and buttons */
 .profile-section {
   background-color: #fff;
   padding: 30px;
@@ -267,6 +284,7 @@ h1 span {
 }
 
 /* Preferences Section */
+/* Styles for the preferences section */
 .profile-section label {
   font-size: 1.1em;
   color: #333;
@@ -279,6 +297,7 @@ h1 span {
 }
 
 /* Buttons */
+/* Styles for edit and change password buttons */
 .edit-profile-btn, .change-password-btn {
   background-color: #213555;
   color: white;
@@ -301,6 +320,7 @@ h1 span {
 }
 
 /* Profile Section Styling */
+/* Styles for the profile container and card */
 .profile-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -383,6 +403,7 @@ h1 span {
 }
 
 /* Log Out Button Styling */
+/* Styles for the logout button */
 .logout-btn {
   background-color: #213555;
   padding: 10px 20px;
@@ -398,8 +419,8 @@ h1 span {
   background-color: #1a2a44;
 }
 
-
 /* Footer Section */
+/* Styles for the footer section */
 .footer {
   background-color: #2c3e50;
   color: white;
@@ -428,6 +449,8 @@ h1 span {
   text-decoration: underline;
 }
 
+/* Home Heading Styles */
+/* Styles for the home heading */
 .homeh1{
   text-align: center;
 }
@@ -439,7 +462,9 @@ h1 span {
 .ho {
   text-align: center;
 }
+
 /* Recent Expense Activity Section */
+/* Styles for the recent expense activity section */
 .recent-activity {
   text-align: center;
   padding: 50px;
@@ -472,6 +497,7 @@ h1 span {
 }
 
 /* Quick Links Section */
+/* Styles for the quick links section */
 .quick-links {
   text-align: center;
   padding: 40px;
@@ -498,6 +524,7 @@ h1 span {
 }
 
 /* Centering Content */
+/* Styles for centering content in various sections */
 #allowanceSection, #savingsDisplay, #expenseSection, #controlsSection, #savingsSection {
   display: flex;
   flex-direction: column;
@@ -508,4 +535,122 @@ h1 span {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
+}
+
+/* Modal Styles */
+/* Styles for the modal used in the profile section */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Progress Bar Styles */
+/* Styles for the progress bars used in recent activity */
+.progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 13px;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: #4caf50;
+    width: 0;
+    height: 20px;
+    border-radius: 10px;
+}
+
+/* Hobbies and Interests Section */
+/* Styles for the new labels in the hobbies and interests section */
+#hobbies-labels, #interests-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.label, .suggestion {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.label.selected, .suggestion.selected {
+    background-color: #2980b9;
+}
+
+#hobbies-checkboxes, #interests-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#hobbies-checkboxes label, #interests-checkboxes label {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#hobbies-checkboxes input[type="checkbox"], #interests-checkboxes input[type="checkbox"] {
+    display: none;
+}
+
+#hobbies-checkboxes input[type="checkbox"]:checked + label, #interests-checkboxes input[type="checkbox"]:checked + label {
+    background-color: #2980b9;
+}
+
+/* Suggestions Section */
+/* Styles for the suggestions in the bio modal */
+#suggestions {
+    margin-top: 10px;
+}
+
+.suggestion {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #2980b9;
 }
