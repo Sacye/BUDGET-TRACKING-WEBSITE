@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Google Sheets Web App URL (Replace this with yours)
-const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbxIOHcPZSELsemL2yC0_v0JN2SFzdTwt5vUFiYanj7F9OaiyKuxKb3kdJHsaB8EPA5hvA/exec";
+const scriptURL= "https://script.google.com/macros/s/AKfycbzHE7NDteOAf8sJZNTp61_UD3DvaoQoB98BzVHKIyJzNOhK06Iwz2l0Bp539EZm8k0HzQ/exec";
 
 // Global Variables
 let expenseData = {};
