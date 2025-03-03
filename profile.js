@@ -158,11 +158,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function safeExecute(fn) {
+        return function() {
+            if (typeof fn === 'function') {
+                fn.apply(this, arguments);
+            } else {
+                console.error(`Function ${fn.name} is not defined.`);
+            }
+        };
+    }
+
     if (changePasswordButton) {
-        changePasswordButton.addEventListener("click", changePassword);
+        changePasswordButton.addEventListener("click", safeExecute(changePassword));
     }
     if (logoutButton) {
-        logoutButton.addEventListener("click", logout);
+        logoutButton.addEventListener("click", safeExecute(logout));
     }
 
     function changePassword() {
