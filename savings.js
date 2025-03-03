@@ -7,6 +7,7 @@ function initializePage() {
       budgetInputElement.focus();
     }
   } else {
+    displayCurrentBudget(budget);
     const remainingBudgetElement = document.getElementById("remainingBudget");
     if (remainingBudgetElement) {
       remainingBudgetElement.textContent = `Remaining Budget: ₱${budget}`;
@@ -17,7 +18,6 @@ function initializePage() {
       trackerLinkElement.style.display = "block";
       chartLinkElement.style.display = "block";
     }
-    displayCurrentBudget(budget);
   }
 }
 
@@ -43,7 +43,8 @@ function setBudget() {
   localStorage.setItem("budget", budget);
   console.log(`User's budget range: ${budgetInput}, Budget: ₱${budget}`); // Log the user's input to the console
   alert("Monthly budget set successfully!");
-  window.location.href = "Tracker.html";
+  displayCurrentBudget(budget); // Display the budget immediately
+  window.location.href = "Tracker.html"; // Updated navigation
 }
 
 function getBudget() {
@@ -53,7 +54,7 @@ function getBudget() {
 function displayCurrentBudget(budget) {
   const currentBudgetElement = document.getElementById("currentBudget");
   if (currentBudgetElement) {
-    currentBudgetElement.textContent = `Current Budget: ₱${budget}`;
+    currentBudgetElement.textContent = budget.toLocaleString(); // Only display the budget number
   }
 }
 
