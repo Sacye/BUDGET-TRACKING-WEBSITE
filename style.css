@@ -1,15 +1,12 @@
-/* General Body Style */
-/* Styles for the main body of the page, including background image, font, and text alignment */
-.firstbody {
-  background: url(https://cdn.dribbble.com/users/836931/screenshots/2716272/bank_800.gif) no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  font-family: 'Arial', sans-serif;
-  color: #F5EFE7;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  position: relative;
+/* full website bg */
+body {
+  background-image: url('background.jpg'); /* Ensure the background image path is correct */
+  background-size: cover; /* Make the background image cover the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-attachment: fixed; /* Make the background image fixed */
+  height: 100vh; /* Ensure the body takes the full height of the viewport */
+  margin: 0; /* Remove default margin */
 }
 
 /* Paragraph Styles */
@@ -49,7 +46,7 @@ h1 span {
 /* Button Styles */
 /* Styles for buttons, including hover effects */
 .button {
-  background-color: #16a085;
+  background-color: #073575;
   padding: 15px 30px;
   border: none;
   border-radius: 50px;
@@ -117,7 +114,7 @@ h1 span {
   justify-content: space-between;  /* Space between logo and menu */
   align-items: center;  /* Vertically align items */
   padding: 10px 20px;
-  background-color: #213555;
+  background-color: #073575;
   border: 2px solid rgba(255, 255, 255, 0.5); /* Transparent border */
   border-radius: 8px;
 }
@@ -208,61 +205,115 @@ h1 span {
 }
 
 .nav-menu a:hover, .dropdown:hover .dropbtn {
-  background-color: #F5EFE7;
+  background-color: #C8D9E6;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #C8D9E6;
 }
 
-/* About Container Styles */
-/* Styles for the about section container */
-.about-container {
-  margin-left: 10vh;
-  margin-right: 10vh;
-  font-size: 23px;
+/* Home nav */
+
+.homeh1{
+  text-align: center;
+  color: black; /* Change text color to black */
+}
+.homeh1 span {
+  font-size: 3.4rem;
+  text-align: center;
+  color: black; /* Change text color to black */
 }
 
-/* Footer Styles */
-/* Styles for the footer section */
-.footer {
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px 20px;
+.ho {
   text-align: center;
 }
 
-.footer-links {
+.recent-activity {
+  text-align: center;
+  padding: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add black shadow effect */
+  border-radius: 5px; /* Match border radius */
+  border: 1px solid #ccc; /* Match border */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center */
+  max-width: 500px; /* Match width of expense list */
+  margin: 20px auto; /* Center the box */
+  margin-top: 40px; /* Add margin to center between sections */
+  margin-bottom: 40px; /* Add margin to center between sections */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background to show the image */
+  backdrop-filter: blur(10px); /* Add blur effect to the background */
+}
+
+.expense-list {
   list-style: none;
   padding: 0;
-  margin-top: 5px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center; /* Center the list */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center */
 }
 
-.footer-links li {
-  display: inline;
-  margin: 0 10px;
+.expense-list li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  text-align: left;
+  border: 1px solid #ccc; /* Add border to user input type */
 }
 
-.footer-links a {
+.expense-list li .delete-btn {
+  margin-left: 10px; /* Add some space between text and delete button */
+}
+
+/* Quick Links Section */
+/* Styles for the quick links section */
+.quick-links {
+  text-align: center;
+  padding: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links .button {
+  background-color: #1c467a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
   color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
   text-decoration: none;
+  font-size: 1.1em;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+.links .button:hover {
+  background-color: #2c6586;
 }
 
+.trackerh1 {
+  text-align: center;
+  color: #000000;
+}
 /* Profile Section Styles */
 /* Styles for the profile section, including cards and buttons */
 .profile-section {
-  background-color: #fff;
+  background-color: white; /* Match background color */
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add black shadow effect */
   margin-bottom: 20px;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 600px; /* Match width of allowance section */
+  margin: 20px auto; /* Center the box */
 }
 
 .profile-section h2 {
@@ -273,14 +324,22 @@ h1 span {
 .recent-activity {
   list-style: none;
   padding: 0;
+  background-color: white;
+  box-shadow: 0 2px 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+
 }
 
 .recent-activity li {
-  background-color: #f4f7f6;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   font-size: 1.1em;
+
 }
 
 /* Preferences Section */
@@ -340,34 +399,7 @@ h1 span {
   gap: 30px;
 }
 
-.profile-picture {
-  flex: 1;
-  text-align: center;
-}
 
-.profile-picture img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #2c3e50;
-  object-fit: cover;
-}
-
-.change-pic-btn {
-  background-color: #2c3e50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.change-pic-btn:hover {
-  background-color:#2c3e50;
-}
 
 .profile-details {
   flex: 2;
@@ -419,10 +451,130 @@ h1 span {
   background-color: #1a2a44;
 }
 
+
+
+
+
+/* Centering Content */
+/* Styles for centering content in various sections */
+#allowanceSection, #savingsDisplay, #expenseSection, #controlsSection, #savingsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 2px 8px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#savingsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 400px; /* Increase the max-width to widen the section */
+  height: 600px; /* Reduce the height of the section */
+  background-color: white;
+  box-shadow: 0 2px 8px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Center the text inside the section */
+}
+
+#savingsSection h2 {
+    margin-bottom: 50px; /* Reduce the margin to move the text upward */
+    color: #073575; /* Add a color that matches the theme */
+    font-size: 2em; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+#savingsSection label {
+    font-size: 1.2em; /* Increase the font size */
+    color: #333; /* Set the text color */
+    margin-top: 10px; /* Add some space above the label */
+}
+
+#currentBudgetDisplay {
+  margin-top: 20px; /* Add some space above the current budget display */
+  font-size: 1.5em; /* Increase the font size */
+  color: #073575; /* Set the text color */
+}
+
+/* Design for the button */
+#savingsSection button {
+    background-color: #073575; /* Match the theme color */
+    color: white;
+    padding: 10px 20px;
+    border: none; /* Make the border invisible */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin to align buttons */
+}
+
+#savingsSection button:hover {
+    background-color: #1abc9c; /* Change color on hover */
+}
+
+/* Design for the input text field */
+#savingsSection input[type="text"],
+#savingsSection input[type="number"],
+#savingsSection select {
+    padding: 10px;
+    border: 1px solid #ccc; /* Make the border visible */
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    background-color: #f9f9f9; /* Set the background color */
+    color: #333; /* Set the text color */
+}
+
+/* Align buttons in the controls section */
+#controlsSection {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between buttons */
+    margin-top: 20px;
+}
+
+/* Two-column layout for the expense logging section */
+#expenseSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 2px 8px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#expenseSection .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#expenseSection .form-group label,
+#expenseSection .form-group input {
+    width: 48%;
+}
+
 /* Footer Section */
 /* Styles for the footer section */
 .footer {
-  background-color: #2c3e50;
+  background-color: #2F4156;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -449,92 +601,8 @@ h1 span {
   text-decoration: underline;
 }
 
-/* Home Heading Styles */
-/* Styles for the home heading */
-.homeh1{
-  text-align: center;
-}
-.homeh1 span {
-  font-size: 3.4rem;
-  text-align: center;
-}
-
-.ho {
-  text-align: center;
-}
-
-/* Recent Expense Activity Section */
-/* Styles for the recent expense activity section */
-.recent-activity {
-  text-align: center;
-  padding: 50px;
-  background: #f4f7f6;
-}
-
-.expense-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-  max-width: 500px;
-  text-align: center; /* Center the list */
-}
-
-.expense-list li {
-  background: white;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center items vertically */
-  font-size: 1.1em;
-  text-align: left; /* Align text to the left */
-}
-
-.expense-list li .delete-btn {
-  margin-left: 10px; /* Add some space between text and delete button */
-}
-
-/* Quick Links Section */
-/* Styles for the quick links section */
-.quick-links {
-  text-align: center;
-  padding: 40px;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.links .button {
-  background-color: #213555;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: all 0.3s ease;
-}
-
-.links .button:hover {
-  background-color: #1a2a44;
-}
-
-/* Centering Content */
-/* Styles for centering content in various sections */
-#allowanceSection, #savingsDisplay, #expenseSection, #controlsSection, #savingsSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
-  max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
+.footer p {
+  margin: 0;
 }
 
 /* Modal Styles */
@@ -584,10 +652,62 @@ h1 span {
 }
 
 .progress {
-    background-color: #4caf50;
+    background-color: #2a398d;
     width: 0;
     height: 20px;
     border-radius: 10px;
+}
+
+/* Expense Percentages Section */
+.expense-percentages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #073575; /* Add border */
+}
+
+.expense-percentages h3 {
+  font-size: 1.5em;
+  color: #073575; /* Match the theme color */
+  margin-bottom: 10px; /* Reduce margin */
+}
+
+.expense-percentages ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.expense-percentages li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px; /* Reduce padding */
+  margin-bottom: 5px; /* Reduce margin */
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.expense-percentages li::before {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 100%;
+  background-color: #073575; /* Default color */
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.expense-percentages li.expensive::before {
+  background-color: #FF6384; /* Color for the most expensive item */
 }
 
 /* Hobbies and Interests Section */
@@ -653,4 +773,17 @@ h1 span {
 
 .suggestion:hover {
     background-color: #2980b9;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.expense-item .date {
+    font-size: 0.9em;
+    color: #888;
+    margin-left: 20px; /* Add distance between price and date */
 }
