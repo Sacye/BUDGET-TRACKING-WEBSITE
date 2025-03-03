@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savings Setup</title>
+    <title>PocketPilot Navigation</title>
     <link rel="stylesheet" href="style.css">
     <script src="savings.js" defer></script>
-    <script src="profile.js" defer></script>
+    <script src="tracker.js" defer></script>
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Navigation bar with logo and company name -->
 <nav class="navbar">
+    <!-- Logo and company name -->
     <div class="logo-container">
-        <img src="https://cdn-icons-png.flaticon.com/512/7752/7752650.png" alt="Logo" class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/7752/7752650.png" alt="Logo" class="logo"> <!-- Ensure the logo image path is correct -->
         <span class="company-name">PocketPilot</span>
     </div>
+
+    <!-- Navigation menu -->
     <ul class="nav-menu">
         <li><a href="intro.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li class="dropdown">
             <button class="dropbtn">Service <i class="fa fa-caret-down"></i></button>
             <div class="dropdown-content">
@@ -31,7 +33,7 @@
     </ul>
 </nav>
 
-<h1>Savings Setup</h1>
+<h1 class="trackerh1">Savings Setup</h1>
 
 <!-- Savings Section -->
 <div id="savingsSection">
@@ -46,6 +48,10 @@
     <br>
     <!-- Removed dark mode toggle -->
     <button id="setSavingsButton">Set Savings</button>
+    <!-- Moved Current Budget Display inside savingsSection -->
+    <div id="currentBudgetDisplay">
+        <h3>Current Budget: ₱<span id="currentBudget">0</span></h3>
+    </div>
 </div>
 
 <script>
@@ -53,5 +59,10 @@
         window.location.href = 'Tracker.html';
     });
 </script>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2023 PocketPilot. All rights reserved.</p>
+</footer>
 </body>
 </html>
