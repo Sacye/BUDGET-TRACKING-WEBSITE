@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PocketPilot Navigation</title>
+    <title>Recent Expenses</title>
     <link rel="stylesheet" href="style.css">
-    <script src="intro.js" defer></script>
 </head>
+
 <body>
 
 <!-- Navigation bar with logo and company name -->
@@ -20,7 +20,6 @@
     <!-- Navigation menu -->
     <ul class="nav-menu">
         <li><a href="intro.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li class="dropdown">
             <button class="dropbtn">Service <i class="fa fa-caret-down"></i></button>
             <div class="dropdown-content">
@@ -36,7 +35,7 @@
 <!-- Hero Section with Personalized Welcome -->
 <section class="hero">
     <div class="hero-content">
-        <h1 class="homeh1">Welcome Back, <span id="user-name">User</span>!</h1>
+        <h1 class="homeh1">Welcome Back, <span id="user-name">User</span></h1>
         <p class="ho">Track your expenses and stay in control of your finances.</p>
     </div>
 </section>
@@ -47,9 +46,6 @@
     <ul class="expense-list" id="recentExpensesList">
         <!-- Recent expenses will be dynamically loaded here -->
     </ul>
-    <button class="button">
-        <a href="Tracker.html">View All Expenses</a>
-    </button>
 </section>
 
 <!-- Quick Links -->
@@ -62,10 +58,7 @@
     </div>
 </section>
 
-<script>
-    // Example: Personalize user greeting if stored in session/localStorage
-    document.getElementById("user-name").innerText = localStorage.getItem("username") || "User";
-</script>
+<script src="intro.js"></script>
 
 <!-- Footer Section -->
 <footer class="footer">
