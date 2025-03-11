@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketPilot Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="intro.js" defer></script>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- Navigation bar with logo and company name -->
+<nav class="navbar">
+    <!-- Logo and company name -->
+    <div class="logo-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/7752/7752650.png" alt="Logo" class="logo">
+        <span class="company-name">PocketPilot</span>
+    </div>
+
+    <!-- Navigation menu -->
+    <ul class="nav-menu">
+        <li><a href="intro.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Service <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="Tracker.html">Tracker</a>
+                <a href="Chart.html">Chart</a>
+                <a href="Savings.html">Savings</a>
+            </div>
+        </li>
+        <li><a href="profile.html">Profile</a></li>
+    </ul>
+</nav>
+
+
+<!-- Profile Section -->
+<div class="profile-container">
+    <h1 class="pro">Your Profile</h1>
+
+    <div class="profile-card">
+        
+        <div class="profile-details">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> john.doe@example.com</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Address:</strong> 1234 Elm Street, City, Country</p>
+        </div>
+    </div>
+
+    <!-- User Bio Section -->
+    <div class="profile-section">
+        <h2>About Me</h2>
+        <p id="user-tagline">#MakeYourTagline</p>
+        <p id="user-hashtags">#YourHashtagsWillAppearHere</p>
+        <button class="edit-profile-btn" onclick="openBioModal()">Edit Bio</button>
+    </div>
+
+    <!-- Bio Modal -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBioModal()">&times;</span>
+            <h2>Edit Bio</h2>
+            <input type="text" id="taglineInput" placeholder="Type your tagline..." oninput="resetTagline()">
+            <div id="suggestions">
+                <span class="suggestion" onclick="toggleHashtag(this, '#BagoLangTo')">#BagoLangTo</span>
+                <span class="suggestion" onclick="toggleHashtag(this, '#ICT1B')">#ICT1B</span>
+                <span class="suggestion" onclick="toggleHashtag(this, '#Newbie')">#Newbie</span>
+                <span class="suggestion" onclick="toggleHashtag(this, '#TechEnthusiast')">#TechEnthusiast</span>
+            </div>
+            <button class="save-btn" onclick="saveBio()">Save</button>
+            <button class="reset-btn" onclick="resetTagline()">Reset</button>
+        </div>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="profile-section">
+        <h2>Hobbies</h2>
+        <p id="user-hobbies">Your hobbies will appear here</p>
+        <div id="hobbies-labels" style="display: none;">
+            <span class="label" onclick="toggleHobby(this)">Reading</span>
+            <span class="label" onclick="toggleHobby(this)">Traveling</span>
+            <span class="label" onclick="toggleHobby(this)">Coding</span>
+            <span class="label" onclick="toggleHobby(this)">Gaming</span>
+            <span class="label" onclick="toggleHobby(this)">Cooking</span>
+        </div>
+        <button class="edit-profile-btn" id="editHobbiesBtn" onclick="editHobbies()">Edit Hobbies</button>
+        <button class="save-btn" id="saveHobbiesBtn" onclick="saveHobbies()" style="display: none;">Save Hobbies</button>
+        <button class="reset-btn" id="resetHobbiesBtn" onclick="resetHobbies()" style="display: none;">Reset</button>
+    </div>
+
+    <!-- Interests Section -->
+    <div class="profile-section">
+        <h2>Interests</h2>
+        <p id="user-interests">Your interests will appear here</p>
+        <div id="interests-labels" style="display: none;">
+            <span class="label" onclick="toggleInterest(this)">Technology</span>
+            <span class="label" onclick="toggleInterest(this)">Music</span>
+            <span class="label" onclick="toggleInterest(this)">Sports</span>
+            <span class="label" onclick="toggleInterest(this)">Art</span>
+            <span class="label" onclick="toggleInterest(this)">Science</span>
+        </div>
+        <button class="edit-profile-btn" id="editInterestsBtn" onclick="editInterests()">Edit Interests</button>
+        <button class="save-btn" id="saveInterestsBtn" onclick="saveInterests()" style="display: none;">Save Interests</button>
+        <button class="reset-btn" id="resetInterestsBtn" onclick="resetInterests()" style="display: none;">Reset</button>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="profile-section">
+        <h2>Recent Activity</h2>
+        <ul class="recent-activity">
+            <li>✔ Completed "Intro to HTML" - 2 days ago <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></li>
+            <li>✔ Unlocked "CSS Basics" Badge - 4 days ago <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div></li>
+            <li>✔ Updated Profile Information - 1 week ago <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div></li>
+        </ul>
+    </div>
+<br><br>
+
+    <button class="button logout-btn" id="logoutButton">Logout</button>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 PocketPilot. All rights reserved.</p>
+</footer>
+
+<script src="profile.js" defer></script>
+
+
+    <script src="js/global.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
