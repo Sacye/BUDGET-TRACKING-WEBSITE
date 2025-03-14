@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - PocketPilot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="image-container">
+      <img src="https://imarticus.org/blog/wp-content/uploads/2020/01/23today.gif" alt="Image" class="background-image" />
+    </div>
+    <div class="form-container">
+      <div class="tabs">
+        <button id="loginTab" class="tab-button active" onclick="showLogin()">Login</button>
+        <button id="signupTab" class="tab-button" onclick="showSignup()">Signup</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginForm" class="form" style="display: block;">
+        <h2>Login to PocketPilot</h2>
+        <form id="login" onsubmit="return loginUser(event)">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password:</label>
+          <div class="input-with-icon">
+            <input type="password" id="password" name="password" required />
+            <!-- Using Unicode for eye icon -->
+            <span class="eye-icon" onclick="togglePassword('password', this)">&#128065;</span>
+          </div>
+
+          <button type="submit" id="loginButton">Login</button>
+        </form>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signupForm" class="form">
+        <h2>Signup</h2>
+        <form id="signup" onsubmit="return signupUser(event)">
+          <label for="signupEmail">Username:</label>
+          <input type="email" id="signupEmail" required />
+
+          <label for="signupPassword">Password:</label>
+          <div class="input-with-icon">
+            <input type="password" id="signupPassword" required />
+            <span class="eye-icon" onclick="togglePassword('signupPassword', this)">&#128065;</span>
+          </div>
+
+          <label for="confirmPassword">Confirm Password:</label>
+          <div class="input-with-icon">
+            <input type="password" id="confirmPassword" required />
+            <span class="eye-icon" onclick="togglePassword('confirmPassword', this)">&#128065;</span>
+          </div>
+
+          <button type="submit" id="signupButton">Signup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

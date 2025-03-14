@@ -1,0 +1,249 @@
+/* Global body styles: sets background image, fixed attachment, typography, and overall color theme */
+body {
+  background-image: url('background.jpg'); /* background image settings */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 200vh;
+  margin: 0;
+
+   /* changed from white to black for better visibility */
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; 
+}
+
+
+/* Container and Text Content styles: Control overall layout of main sections */
+.container { /* Centered container with flex layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+
+/* sa mga cellphone user sa looks ng website */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .text-content { 
+    padding: 10px; /* Adjusts text spacing */
+    text-align: center; /* Centers text */
+  }
+
+  img {
+    max-width: 100%; /* Ensures images don’t overflow */
+    height: auto; /* Keeps aspect ratio */
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+
+/* Navigation bar and Dropdown menu styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #073575;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+/* Add hover effects for navigation bar */
+.navbar:hover {
+    border-color: white;
+}
+
+.navbar:hover .nav-menu li a, 
+.navbar:hover .dropdown .dropbtn, 
+.navbar:hover .company-name {
+    color: white;
+}
+.logo-container { /* Logo and company name together */
+  display: flex;
+  align-items: center;
+}
+.logo { /* Logo size settings */
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+.company-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-menu { /* Main navigation links */
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+.nav-menu li {
+  margin-left: 20px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: white; /* updated text color */
+}
+.dropdown { /* Dropdown container */
+  position: relative;
+}
+.dropdown .dropbtn { /* Dropdown button styles */
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1px 16px;
+  background-color: inherit;
+  cursor: pointer;
+}
+.dropdown-content { /* Hidden dropdown content */
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5); /* updated to transparent white */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content { /* Show dropdown on hover */
+  display: block;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: bold; /* make text bolder */
+  font-size: 1.1em;  /* increase font size */
+}
+.nav-menu a:hover, .dropdown:hover .dropbtn {
+  background-color: #C8D9E6;
+}
+.dropdown-content a:hover {
+  background-color: #C8D9E6;
+}
+
+
+/* Quick Links, Centered Content, and Footer */
+.quick-links {
+  text-align: center;
+  padding: 40px;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.links .button {
+  background-color: #1c467a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+.links .button:hover {
+  background-color: #2c6586;
+}
+
+
+/* Footer Section */
+.footer {
+  background-color: #2F4156;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Suggestions Section diko alam para san to */
+#suggestions {
+  margin-top: 10px;
+}
+
+.suggestion {
+  display: inline-block;
+  background-color: #3498db;
+  color: rgb(254, 4, 4);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #2980b9;
+}
+
+/* Reset some default styles eg text */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/* Form container */
+.form-container {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #003140;
+  border-radius: 10px;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  max-width: 550px;
+  width: 100%;
+}
+
+.right-align {
+  text-align: center;
+}

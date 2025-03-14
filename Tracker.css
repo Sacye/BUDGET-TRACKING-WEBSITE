@@ -1,0 +1,196 @@
+/* Global body styles: sets background image, fixed attachment, typography, and overall color theme */
+body {
+  background-image: url('background.jpg'); /* background image settings */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 200vh;
+  margin: 0;
+  color: black; /* changed from white to black for better visibility */
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; 
+}
+
+
+/* Profile Section Styles */
+
+.profile-section {
+
+  background-color: white; /* Match background color */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add black shadow effect */
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 600px; /* Match width of allowance section */
+  margin: 10px auto; /* Center the box */
+}
+
+.profile-section h2 {
+  color: #213555;
+  margin-bottom: 100px;
+}
+
+.recent-activity {
+  list-style: none;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+
+}
+
+.recent-activity li {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 2px 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+
+}
+
+.expense-list {
+
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center; /* Center the list */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center */
+}
+
+.expense-list li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  text-align: center;
+  border: 1px solid #ccc; /* Add border to user input type */
+}
+
+.expense-list li .delete-btn {
+  margin-bottom: 10px; /* Add some space between text and delete button */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc; /* add border to user input type */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color : black;
+}
+
+.expense-list li .delete-btn:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+/*button to sa tracker yung done and add expenses */
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #2563eb;
+  color: rgb(233, 0, 0);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.cta-button:hover {
+  background-color: #af1e1e;
+}
+.new-button {
+  background-color: #0099ff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+.new-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Profile Section Styles */
+
+.profile-section {
+
+  background-color: white; /* Match background color */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(29, 28, 28, 0.815); /* Add black shadow effect */
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 600px; /* Match width of allowance section */
+  margin: 20px auto; /* Center the box */
+}
+
+.profile-section h2 {
+  color: #213555;
+  margin-bottom: 100px;
+}
+
+
+
+.recent-activity li {
+  background-color: rgb(249, 244, 244);
+  box-shadow: 0 2px 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+
+}
+/* Centering Content */
+#allowanceSection, #savingsDisplay, #expenseSection, #controlsSection, #savingsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 8px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+/* Tracker Heading */
+
+.trackerh1 {
+
+  text-align: center;
+  color: #000000;
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px; /* Add padding for better spacing */
+
+
+
+.right-align {
+  text-align: center;
+}
+}
+
+/* Center and change color of budget tracker text */
+.budget-tracker {
+  text-align: center;
+  color: rgb(8, 8, 8);
+}

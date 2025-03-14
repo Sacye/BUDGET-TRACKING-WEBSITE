@@ -1,0 +1,146 @@
+
+
+/* Home page header styling */
+.homeh1 {
+  text-align: center;
+  color: rgb(132, 88, 88);
+  
+  padding: 10px;
+}
+.homeh1 span {
+  font-size: 3.4rem;
+  text-align: center;
+  color: black;
+  
+  padding: 5px;
+}
+.ho {
+  text-align: center;
+ 
+  padding: 10px;
+}
+
+
+
+/* Heading Styles */
+h1 {
+  font-size: 3.5em;
+  color: black; /* Set text color to black */
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+   /* Make background color transparent */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+h1 span {
+  color: blue;
+  font-size: 3.4em;
+  background-color: rgba(0, 0, 0, 0.5); /* Add background color for better visibility */
+  padding: 5px; /* Add padding for better spacing */
+  border: 1px solid white; /* Change border color to white */
+}
+
+/* Set background image */
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Button Styles */
+
+.button {
+
+  background-color: #073575;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #1abc9c;
+  transform: scale(1.1);
+}
+
+.button span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Recent Activity Section */
+
+.recent-activity {
+
+  text-align: center;
+  padding: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add black shadow effect */
+  border-radius: 5px; /* Match border radius */
+  border: 1px solid white; /* Change border color to white */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center */
+  max-width: 500px; /* Match width of expense list */
+  margin: 20px auto; /* Center the box */
+  margin-top: 40px; /* Add margin to center between sections */
+  margin-bottom: 40px; /* Add margin to center between sections */
+ 
+  backdrop-filter: blur(10px); /* Add blur effect to the background */
+}
+
+/* Quick Links Section */
+
+.quick-links {
+
+  text-align: center;
+  padding: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links .button {
+  background-color: #1c467a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.links .button:hover {
+  background-color: #2c6586;
+}
+
+p {
+  color: black; /* Revert the color of the p text */
+  border: none; /* Remove the border from the p element */
+}
+
+.right-align {
+  text-align: right;
+}
+
+.homeh1 {
+  color: black; /* Set text color to black */
+  border: none; /* Make the border transparent */
+}
+
+
+
